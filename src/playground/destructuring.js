@@ -13,20 +13,27 @@ const {name :firstname = 'Anonymous', age} = person;
 
 console.log(`${firstname} is ${age}.`)
 
-const {city, temperature:temp} = person.location;
-if (city && temp){
-    console.log(`it is ${temp} degrees in ${city}.`)
-}
+// const {city, temperature:temp} = person.location;
+// if (city && temp){
+//     console.log(`it is ${temp} degrees in ${city}.`)
+// }
 
 
-const book = {
-    name : 'Dragon Attacks',
-    authur: 'Jame Cameron',
-    publisher : {
-        name:'Zarrin Book'
-    }
-}
+// const book = {
+//     name : 'Dragon Attacks',
+//     authur: 'Jame Cameron',
+//     publisher : {
+//         name:'Zarrin Book'
+//     }
+// }
 
-const {name : publisherName = 'Self Published'} = book.publisher
+//const {name : publisherName = 'Self Published'} = book.publisher
 
-console.log(`${publisherName}`)
+//console.log(`${publisherName}`)
+
+const address = ['Conn Heights', 'Success', 'Western Australia', '6164'];
+
+//const [street, city, state, zipcode] = address;
+const [, city, state = 'WA'] = address;
+
+console.log(`You are in ${city} ${state}.`);
