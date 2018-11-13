@@ -57,8 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-public/bundle.js
-public/bundle.js.map
-public/styles.css
-public/styles.css.map
+public/dist/
 yarn-error.log
