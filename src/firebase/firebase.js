@@ -14,19 +14,19 @@ const config = {
 
   const database = firebase.database();
   
-  database.ref().set({
-      name: 'Shahrooz Jafari',
-      age: 41,
-      isSingle: false,
-      location:{
-          city:'Perth',
-          country: 'Australia'
-      }
-  }).then(()=>{
-    console.log('Database Updated');
-  }).catch((e)=>{
-    console.log('Error massage: ', e);
-  });
+//   database.ref().set({
+//       name: 'Shahrooz Jafari',
+//       age: 41,
+//       isSingle: false,
+//       location:{
+//           city:'Perth',
+//           country: 'Australia'
+//       }
+//   }).then(()=>{
+//     console.log('Database Updated');
+//   }).catch((e)=>{
+//     console.log('Error massage: ', e);
+//   });
 
 //   database.ref('age').set(42);
 //   database.ref('location/city').set('Success');
@@ -52,13 +52,34 @@ const config = {
 // });
 
 //Update database
-database.ref().update({
-    name: 'Fershteh',
-    age : 40,
-    job: 'Accountant',
-    'location/city': 'Fremantle'
-}).then(()=>{
-    console.log('Database Updated');
-}).catch((e)=>{
-    console.log('Error massage: ', e);
-});
+// database.ref().update({
+//     name: 'Fershteh',
+//     age : 40,
+//     job: 'Accountant',
+//     'location/city': 'Fremantle'
+// }).then(()=>{
+//     console.log('Database Updated');
+// }).catch((e)=>{
+//     console.log('Error massage: ', e);
+// });
+
+//fetch data by once
+// database.ref('location')
+// .once('value')
+// .then((snapshot)=>{
+//     const val = snapshot.val();
+//     console.log(val);
+// }).catch((e)=>{
+//      console.log('Error massage: ', e);
+// });
+
+// fetch data by subscription
+database.ref('location')
+.on('value', (snapshot)=>{
+    console.log(snapshot.val());
+}, (e) => {
+    console.log('error fetching data', e);
+}) ;
+
+// off subscription
+//database.ref.off();
