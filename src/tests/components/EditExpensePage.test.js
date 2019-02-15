@@ -15,7 +15,7 @@ beforeEach(()=>{
                             expense = {expenses[2]}/>);
 });
 
-test('should render EditExpensePage correctly',() => {
+test('should render EditExpensePage correctly',() => {  
     expect(wrapper).toMatchSnapshot();
 });
 
