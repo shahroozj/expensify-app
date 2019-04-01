@@ -10,16 +10,6 @@ exports[`should render header correctly 1`] = `
       <NavLink
         activeClassName="is-active"
         ariaCurrent="true"
-        to="/about"
-      >
-        About
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        activeClassName="is-active"
-        ariaCurrent="true"
-        exact={true}
         to="/dashboard"
       >
         Dashboard
@@ -32,15 +22,6 @@ exports[`should render header correctly 1`] = `
         to="/create"
       >
         Create Expense
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        activeClassName="is-active"
-        ariaCurrent="true"
-        to="/help"
-      >
-        Help
       </NavLink>
     </li>
     <button
